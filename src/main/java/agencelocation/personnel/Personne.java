@@ -4,6 +4,8 @@
  */
 package agencelocation.personnel;
 
+import java.util.Date;
+
 /**
  *
  * @author LENOVO
@@ -12,19 +14,28 @@ package agencelocation.personnel;
   
 
 public class Personne {
-    private double cin ;
-    private String nom;
-    private String prenom;
-    private double tel;
-    private String email;
+    protected double cin ;
+    protected String nom;
+    protected String prenom;
+    protected double tel;
+    protected String email;
+    protected String adresse;
+    protected Date dateNaissance;
+    protected String nationalite;
+    protected Date dateCin;
+    protected String lieuCin;
 
-    public Personne(double cin,String nom, String prenom, double tel,String email)
-    {
-        this.cin=cin;
-        this.nom=nom;
-        this.prenom=prenom;
-        this.tel=tel;
-        this.email=email;
+    public Personne(double cin, String nom, String prenom, double tel, String email, String adresse, Date dateNaissance, String nationalite, Date dateCin, String lieuCin) {
+        this.cin = cin;
+        this.nom = nom;
+        this.prenom = prenom;
+        this.tel = tel;
+        this.email = email;
+        this.adresse = adresse;
+        this.dateNaissance = dateNaissance;
+        this.nationalite = nationalite;
+        this.dateCin = dateCin;
+        this.lieuCin = lieuCin;
     }
 
     public double getCin() {
@@ -47,9 +58,24 @@ public class Personne {
         return email;
     }
 
-    @Override
-    public String toString(){
-        return "Personne{cin"+cin+"nom="+nom+"prenom"+prenom+"tel"+tel+"email"+email+"}";
+    public String getAdresse() {
+        return adresse;
+    }
+
+    public Date getDateNaissance() {
+        return dateNaissance;
+    }
+
+    public String getNationalite() {
+        return nationalite;
+    }
+
+    public Date getDateCin() {
+        return dateCin;
+    }
+
+    public String getLieuCin() {
+        return lieuCin;
     }
 
     public void setCin(double cin) {
@@ -64,12 +90,37 @@ public class Personne {
         this.prenom = prenom;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
     public void setTel(double tel) {
         this.tel = tel;
     }
 
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setAdresse(String adresse) {
+        this.adresse = adresse;
+    }
+
+    public void setDateNaissance(Date dateNaissance) {
+        this.dateNaissance = dateNaissance;
+    }
+
+    public void setNationalite(String nationalite) {
+        this.nationalite = nationalite;
+    }
+
+    public void setDateCin(Date dateCin) {
+        this.dateCin = dateCin;
+    }
+
+    public void setLieuCin(String lieuCin) {
+        this.lieuCin = lieuCin;
+    }
+
+    @Override
+    public String toString() {
+        return "Personne{" + "cin=" + cin + ", nom=" + nom + ", prenom=" + prenom + ", tel=" + tel + ", email=" + email + ", adresse=" + adresse + ", dateNaissance=" + dateNaissance + ", nationalite=" + nationalite + ", dateCin=" + dateCin + ", lieuCin=" + lieuCin + '}';
+    }
+    
 }
